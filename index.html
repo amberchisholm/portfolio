@@ -17,6 +17,9 @@
     --input-bg: #0f172a;
     --input-border: rgba(255,255,255,0.25);
     --input-text: #f1f5f9;
+    --link-text: #67e8f9;
+    --link-bg: rgba(34, 211, 238, 0.16);
+    --link-border: rgba(34, 211, 238, 0.4);
   }
 
   [data-theme="light"] {
@@ -31,6 +34,9 @@
     --input-bg: #ffffff;
     --input-border: #cbd5e1;
     --input-text: #0f172a;
+    --link-text: #0e7490;
+    --link-bg: rgba(8, 145, 178, 0.10);
+    --link-border: rgba(8, 145, 178, 0.35);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -290,19 +296,22 @@
 
   .project-links { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
 
-  .project-link {
-    padding: 0.55rem 1rem;
-    background: color-mix(in srgb, var(--accent) 12%, transparent);
-    color: var(--accent);
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-    transition: all 0.3s ease;
-  }
+.project-link {
+  padding: 0.55rem 1rem;
+  background: var(--link-bg);
+  color: var(--link-text);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: 1px solid var(--link-border);
+  transition: all 0.3s ease;
+}
 
-  .project-link:hover { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.project-link:hover {
+  background: var(--link-bg);
+  filter: brightness(1.15);
+}
 
   .project-note {
     font-size: 0.78rem;
@@ -447,9 +456,9 @@
           <span class="preview-badge">Preview</span>
         </div>
         <div class="project-icon">📊</div>
-        <h3 class="project-title">Bigfoot Sightings Dashboard</h3>
-        <p class="project-description">Interactive Power BI report tracking Bigfoot sightings across the country, a fun little project to break from the normal dashboards and reports we always see. Using actual found data I cleaned and loaded.</p>
-        <div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL Server</span></div>
+        <h3 class="project-title">Bigfoot Sightings Dashboard Visualzation</h3>
+        <p class="project-description">Interactive Power BI report tracking Bigfoot sightings across the country, a fun little project to break from the normal dashboards and reports we always see. Using real-world data I cleaned and loaded.</p>
+        <div class="project-tags"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">SQL</span></div>
         <div class="project-links">
           <a href="https://github.com/amberchisholm/portfolio/releases/download/PowerBI/Bigfoot_Sightings.pbix">Download .pbix ⬇</a>
         </div>
